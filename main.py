@@ -8,11 +8,14 @@ from quiz_data import quiz_data
 #create the main window
 root = tk.Tk()
 root.title("Quiz App")
-root.geometry("600x500")
-style = Style(theme="flatly")
+root.geometry("600x600")
+root.configure(bg="lightblue")
 
-style.configure("TLabel", font=("Helvetica", 20))
-style.configure("TButton", font=("Helvetica", 16))
+style = Style(theme="flatly")
+root.configure(background="lightblue")  # Set background color based on theme
+
+style.configure("TLabel", font=("Poppins", 18))
+style.configure("TButton", font=("Helvetica", 15))
 
 def show_question():
     #get the current question from the quiz_data list
@@ -76,7 +79,8 @@ style.configure("Custom.TFrame", background="lightblue")
 outer_frame = tk.Frame(
     root,
     pady=20,
-    bg='red'
+    padx=20,
+    background="orange"
 )
 outer_frame.pack(pady=10)
 
